@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdullah Awamleh — Video Editor & Motion</title>
+  <meta name="description" content="Abdullah Awamleh — video editor, montage artist and motion designer based in Amman, Jordan.">
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER: film countdown ============ -->
+<div class="loader" id="loader">
+  <div class="loader__ring"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="90"/></svg></div>
+  <div class="loader__cross"></div>
+  <div class="loader__num" id="loaderNum">3</div>
+  <div class="loader__tc mono" id="loaderTc">00:00:00:00</div>
+</div>
+
+<!-- letterbox bars -->
+<div class="letterbox letterbox--top"></div>
+<div class="letterbox letterbox--bottom"></div>
+
+<canvas class="dust" id="dust" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+
+<!-- ============ HUD ============ -->
+<header class="hud">
+  <div class="hud__left">
+    <a href="#home" class="hud__logo" data-magnetic>A<span>/</span>A</a>
+    <span class="hud__scene mono" id="hudScene">SC.01 · HOME</span>
+  </div>
+  <nav class="hud__nav">
+    <a href="#about" data-text="About">About</a>
+    <a href="#reel" data-text="Reel">Reel</a>
+    <a href="#stills" data-text="Stills">Stills</a>
+    <a href="#timeline" data-text="Timeline">Timeline</a>
+    <a href="#toolkit" data-text="Toolkit">Toolkit</a>
+    <a href="#contact" data-text="Contact">Contact</a>
+  </nav>
+  <div class="hud__rec mono"><i></i>REC <span id="hudTc">00:00:00:00</span></div>
+</header>
+
+<!-- scroll progress styled as a playhead on a timeline -->
+<div class="scrub" aria-hidden="true">
+  <div class="scrub__track"></div>
+  <div class="scrub__fill" id="scrubFill"></div>
+  <div class="scrub__head" id="scrubHead"></div>
+</div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <video class="hero__video" src="../assets/video/4.webm" autoplay muted loop playsinline preload="auto"></video>
+      <div class="hero__shade"></div>
+    </div>
+
+    <div class="hero__ringwrap" aria-hidden="true"><div class="hero__ring" id="heroRing"></div></div>
+
+    <div class="hero__meta mono">
+      <span>SCENE 01</span><span>TAKE 01</span><span>AMMAN — JO</span>
+    </div>
+
+    <h1 class="hero__title" aria-label="Abdullah Awamleh">
+      <span class="line"><span class="word glitch" data-text="ABDULLAH">ABDULLAH</span></span>
+      <span class="line line--outline"><span class="word">AWAMLEH</span></span>
+    </h1>
+
+    <div class="hero__roles">
+      <span class="mono">// </span>
+      <span class="roles__swap" id="roleSwap">Video Editor</span>
+    </div>
+
+    <div class="hero__cta">
+      <a href="#reel" class="btn btn--play" data-magnetic data-cursor="Play">
+        <span class="btn__icon">▶</span> Watch the reel
+      </a>
+      <a href="#contact" class="btn btn--ghost" data-magnetic>Let's work</a>
+    </div>
+
+    <div class="hero__scroll mono"><span>SCROLL</span><i></i></div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__inner">
+      <span>Editing</span><b>✦</b><span>Montage</span><b>✦</b><span>Motion Graphics</span><b>✦</b><span>Color</span><b>✦</b><span>Film Making</span><b>✦</b><span>Content Creation</span><b>✦</b><span>Ads</span><b>✦</b>
+      <span>Editing</span><b>✦</b><span>Montage</span><b>✦</b><span>Motion Graphics</span><b>✦</b><span>Color</span><b>✦</b><span>Film Making</span><b>✦</b><span>Content Creation</span><b>✦</b><span>Ads</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-tag mono"><span>01</span> — About</div>
+    <div class="about__grid">
+      <div class="about__photo" data-tilt>
+        <div class="about__frame">
+          <img src="../assets/img/personal.jpeg" alt="Portrait of Abdullah Awamleh">
+          <div class="about__scan"></div>
+        </div>
+        <div class="about__corners"><i></i><i></i><i></i><i></i></div>
+        <div class="about__label mono">CAM A · 50mm · f/1.8</div>
+      </div>
+
+      <div class="about__text">
+        <p class="about__lead reveal-words">
+          I cut stories that <em>move</em>. A Jordanian content creator from Amman, turning raw footage into edits, ads and motion that people actually stop scrolling for.
+        </p>
+        <p class="about__body reveal">
+          Video editing, digital animation, advertising design, photography and daily content — plus a background in marketing and film production, so every cut serves the brand, not just the beat.
+        </p>
+
+        <div class="stats">
+          <div class="stat"><b data-count="4">0</b><span>+ years<br>creating</span></div>
+          <div class="stat"><b data-count="5">0</b><span>studios &<br>brands</span></div>
+          <div class="stat"><b data-count="95">0</b><span>% Adobe<br>fluency</span></div>
+        </div>
+
+        <!-- production slate / crew pass -->
+        <div class="slate" id="slate">
+          <div class="slate__clap"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="slate__body">
+            <div class="slate__row slate__row--top mono">
+              <span>PRODUCTION</span><b>AWAMLEH STUDIO</b>
+            </div>
+            <div class="slate__grid">
+              <div><span class="mono">ROLL</span><b>A-001</b></div>
+              <div><span class="mono">SCENE</span><b>02</b></div>
+              <div><span class="mono">TAKE</span><b>∞</b></div>
+              <div class="slate__wide"><span class="mono">DIRECTOR / EDITOR</span><b>Abdullah F. Awamleh</b></div>
+              <div><span class="mono">BASED</span><b>Amman, JO</b></div>
+              <div><span class="mono">LANG</span><b>AR · EN</b></div>
+              <div><span class="mono">STATUS</span><b class="slate__status">● AVAILABLE</b></div>
+            </div>
+            <div class="slate__mrz mono">
+              <span>CREW&lt;JOR&lt;AWAMLEH&lt;&lt;ABDULLAH&lt;FAIZ&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+              <span>EDITOR&lt;&lt;MOTION&lt;&lt;FILMMAKER&lt;&lt;AMMAN&lt;&lt;&lt;&lt;&lt;&lt;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- skills as audio meters -->
+    <div class="meters">
+      <div class="meters__head mono"><span>AUDIO MIXER — SKILLS</span><span>dB</span></div>
+      <div class="meters__row" id="meters"></div>
+    </div>
+  </section>
+
+  <!-- ============ REEL (horizontal scroll) ============ -->
+  <section class="reel" id="reel">
+    <div class="reel__pin">
+      <div class="reel__head">
+        <div class="section-tag mono"><span>02</span> — Reel</div>
+        <h2 class="big-title"><span>Recent</span> <span class="outline">Cuts</span></h2>
+        <p class="mono reel__hint">Hover to preview · Click to play with sound</p>
+      </div>
+      <div class="reel__track" id="reelTrack"></div>
+    </div>
+  </section>
+
+  <!-- ============ STILLS ============ -->
+  <section class="stills" id="stills">
+    <div class="section-tag mono"><span>03</span> — Stills & Design</div>
+    <h2 class="big-title"><span>Frames</span> <span class="outline">&amp; Design</span></h2>
+    <div class="stills__grid" id="stillsGrid"></div>
+  </section>
+
+  <!-- ============ TIMELINE (experience as edit tracks) ============ -->
+  <section class="timeline" id="timeline">
+    <div class="section-tag mono"><span>04</span> — Experience</div>
+    <h2 class="big-title"><span>The</span> <span class="outline">Timeline</span></h2>
+
+    <div class="tl">
+      <div class="tl__ruler mono">
+        <span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+      </div>
+      <div class="tl__tracks" id="tlTracks"></div>
+      <div class="tl__playhead" id="tlPlayhead"></div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLKIT ============ -->
+  <section class="toolkit" id="toolkit">
+    <div class="section-tag mono"><span>05</span> — Toolkit</div>
+    <h2 class="big-title"><span>Effects</span> <span class="outline">Panel</span></h2>
+    <div class="tools" id="tools"></div>
+    <div class="marquee marquee--flat" aria-hidden="true">
+      <div class="marquee__inner marquee__inner--rev">
+        <span>Premiere Pro</span><b>✦</b><span>After Effects</span><b>✦</b><span>Photoshop</span><b>✦</b><span>Illustrator</span><b>✦</b><span>Audition</span><b>✦</b><span>Lightroom</span><b>✦</b>
+        <span>Premiere Pro</span><b>✦</b><span>After Effects</span><b>✦</b><span>Photoshop</span><b>✦</b><span>Illustrator</span><b>✦</b><span>Audition</span><b>✦</b><span>Lightroom</span><b>✦</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-tag mono"><span>06</span> — Contact</div>
+    <p class="contact__kicker mono">Got footage? Got an idea?</p>
+    <a class="contact__big" href="mailto:aboodawamleh154@gmail.com" data-cursor="Email" id="contactBig">
+      <span class="contact__line"><span class="scatter">LET'S</span></span>
+      <span class="contact__line"><span class="outline scatter">MAKE IT</span></span>
+      <span class="contact__line"><span class="scatter">MOVE</span><i class="contact__arrow">↗</i></span>
+    </a>
+    <p class="contact__hint mono">Move through the letters ↑</p>
+    <div class="contact__links">
+      <a href="mailto:aboodawamleh154@gmail.com" data-magnetic><span class="mono">Email</span>aboodawamleh154@gmail.com</a>
+      <a href="tel:+962790767505" data-magnetic><span class="mono">Phone</span>+962 79 076 7505</a>
+      <a href="https://wa.me/962790767505" target="_blank" rel="noopener" data-magnetic><span class="mono">WhatsApp</span>Message me</a>
+      <a href="https://www.linkedin.com/in/abdullah-awamleh-062b5326b/" target="_blank" rel="noopener" data-magnetic><span class="mono">LinkedIn</span>Abdullah Awamleh</a>
+    </div>
+  </section>
+
+  <footer class="footer mono">
+    <span>© <span id="year"></span> Abdullah Awamleh</span>
+    <span>Amman, Jordan</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+</main>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">‹</button>
+  <div class="lightbox__stage" id="lbStage"></div>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">›</button>
+  <div class="lightbox__count mono" id="lbCount"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

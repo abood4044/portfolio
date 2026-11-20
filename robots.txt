@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /v1-film/
+Disallow: /v2-purple/
+
+Sitemap: https://abood4044.github.io/portfolio/sitemap.xml
