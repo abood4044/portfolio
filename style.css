@@ -518,3 +518,11 @@ button{font:inherit;color:inherit}
 .hero__line:not(.hero__line--ghost){color:#00e5ff;text-shadow:0 0 18px rgba(0,229,255,.55),0 0 48px rgba(0,229,255,.25),0 6px 0 rgba(0,0,0,.35)}
 .sun{background:linear-gradient(#00e5ff,#3b0a6b);box-shadow:0 0 90px rgba(140,82,230,.6)}
 .igcard{border-color:rgba(166,107,255,.4)}
+
+/* ============ no sideways scrolling on phones ============ */
+html,body{overflow-x:hidden;max-width:100%}        /* iOS needs it on both */
+main,section,.tapes,.contact{overflow-x:clip}     /* clip: cuts off animations (e.g. the UFO) without making new scroll areas */
+@media (max-width:600px){
+  .title{font-size:9.4vw;font-stretch:130%}        /* longest word ("EXPERIENCE") fits a 320–600px screen */
+  .picker__title{font-size:9vw}
+}

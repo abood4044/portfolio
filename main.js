@@ -461,7 +461,7 @@ $("#pickerGrid").innerHTML = ROLE_KEYS.map((k) => {
     <span class="role__name">${r.name}</span>
     <span class="role__ar" lang="ar" dir="rtl">${r.ar}</span>
     <span class="role__desc">${r.desc}</span>
-    <span class="role__stat">${top[0]} <i><b style="--v:${top[1]}%"></b></i> ${top[1]}</span>
+    <span class="role__stat">${top[0]} <i><b style="--v:${top[1]}%"></b></i></span>
     <span class="role__go">Select ▶</span>
   </button>`;
 }).join("");
@@ -482,13 +482,13 @@ $$(".role").forEach((b) => b.addEventListener("click", () => chooseRole(b.datase
   function size() {
     dpr = Math.min(devicePixelRatio || 1, 2);
     w = cv.width = innerWidth * dpr; h = cv.height = innerHeight * dpr; cx = w / 2; cy = h / 2;
-    stars = Array.from({ length: innerWidth < 700 ? 160 : 340 }, () => { const s = {}; reset(s); return s; });
+    stars = Array.from({ length: innerWidth < 700 ? 80 : 170 }, () => { const s = {}; reset(s); return s; });
   }
   size(); addEventListener("resize", size);
   ScrollTrigger.create({ onUpdate: (st) => { boost = Math.min(Math.abs(st.getVelocity()) / 60, 30); } });
   gsap.ticker.add(() => {
     boost *= 0.94;
-    const speed = (reduced ? 0.6 : 2) * dpr + boost * dpr;
+    const speed = ((reduced ? 0.6 : 2) * dpr + boost * dpr) * 0.5; // 50% slower than before
     ctx.clearRect(0, 0, w, h);
     for (const s of stars) {
       s.pz = s.z; s.z -= speed;
