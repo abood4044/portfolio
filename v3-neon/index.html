@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ===== SEO: if the site moves to another address, update every https://abood4044.github.io/portfolio/ below,
+       plus robots.txt and sitemap.xml ===== -->
+  <title>Abdullah Awamleh | Video Editor & Graphic Designer in Amman, Jordan</title>
+  <meta name="description" content="Abdullah Awamleh (عبدالله العواملة) — video editor, graphic designer, on-camera talent and content creator in Amman, Jordan. See his work and download his CV.">
+  <meta name="author" content="Abdullah Awamleh">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://abood4044.github.io/portfolio/">
+  <meta name="geo.region" content="JO-AM">
+  <meta name="geo.placename" content="Amman">
+
+  <!-- social share preview (WhatsApp, LinkedIn, Facebook, X) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Abdullah Awamleh">
+  <meta property="og:title" content="Abdullah Awamleh | Video Editor & Graphic Designer in Amman">
+  <meta property="og:description" content="Video editing, motion graphics, graphic design, on-camera work and content creation — portfolio and CV.">
+  <meta property="og:url" content="https://abood4044.github.io/portfolio/">
+  <meta property="og:image" content="https://abood4044.github.io/portfolio/assets/img/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Abdullah Awamleh — Video Editor & Graphic Designer">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_JO">
+  <meta property="profile:first_name" content="Abdullah">
+  <meta property="profile:last_name" content="Awamleh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdullah Awamleh | Video Editor & Graphic Designer in Amman">
+  <meta name="twitter:description" content="Video editing, motion graphics, graphic design, on-camera work and content creation — portfolio and CV.">
+  <meta name="twitter:image" content="https://abood4044.github.io/portfolio/assets/img/share.jpg">
+
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/img/personal.jpeg">
+
+  <!-- structured data: tells Google who this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://abood4044.github.io/portfolio/#person",
+        "name": "Abdullah Awamleh",
+        "alternateName": ["Abdullah Faiz Alawamleh", "Abdullah Al Awamleh", "Abood Awamleh", "عبدالله العواملة"],
+        "jobTitle": ["Video Editor", "Graphic Designer", "On-Camera Talent", "Content Creator"],
+        "description": "Jordanian video editor, graphic designer, on-camera talent and content creator based in Amman, Jordan.",
+        "url": "https://abood4044.github.io/portfolio/",
+        "image": "https://abood4044.github.io/portfolio/assets/img/personal.jpeg",
+        "email": "mailto:aboodawamleh154@gmail.com",
+        "telephone": "+962790767505",
+        "address": { "@type": "PostalAddress", "addressLocality": "Amman", "addressCountry": "JO" },
+        "nationality": { "@type": "Country", "name": "Jordan" },
+        "worksFor": { "@type": "Organization", "name": "Jo Academy", "url": "https://joacademy.com/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Al-Balqa Applied University" },
+        "knowsLanguage": ["ar", "en"],
+        "knowsAbout": ["Video editing", "Motion graphics", "Graphic design", "Advertising design", "Content creation", "Filmmaking", "Photography", "Marketing", "Acting", "Adobe Premiere Pro", "Adobe After Effects", "Adobe Photoshop", "Adobe Illustrator"],
+        "sameAs": ["https://www.linkedin.com/in/abdullah-awamleh-062b5326b/", "https://www.instagram.com/abdullah_al_awamleh_/"]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://abood4044.github.io/portfolio/#page",
+        "url": "https://abood4044.github.io/portfolio/",
+        "name": "Abdullah Awamleh | Video Editor & Graphic Designer in Amman, Jordan",
+        "inLanguage": "en",
+        "mainEntity": { "@id": "https://abood4044.github.io/portfolio/#person" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://abood4044.github.io/portfolio/#website",
+        "url": "https://abood4044.github.io/portfolio/",
+        "name": "Abdullah Awamleh",
+        "publisher": { "@id": "https://abood4044.github.io/portfolio/#person" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Sora:wght@300;400;600;700&family=Press+Start+2P&family=Lalezar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20">
+</head>
+<body class="is-loading">
+
+<!-- ===== background: sky gradient + warp starfield ===== -->
+<div class="sky" id="sky" aria-hidden="true"></div>
+<canvas class="space" id="space" aria-hidden="true"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- ===== loader ===== -->
+<div class="loader" id="loader">
+  <p class="pixel loader__title">ABDULLAH.EXE</p>
+  <p class="loader__count" id="loaderCount">0%</p>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+  <p class="pixel loader__tip" id="loaderTip">Rendering timeline…</p>
+</div>
+<div class="flash" id="flash"><span id="flashText">READY!</span></div>
+
+<!-- ===== role picker: select your character ===== -->
+<div class="picker" id="picker" aria-hidden="true">
+  <div class="picker__head">
+    <span class="chip chip--pixel pixel blink">SELECT YOUR CHARACTER</span>
+    <h2 class="picker__title">Who are you hiring?</h2>
+    <p class="picker__sub">Pick a role — the portfolio shows only the work for that role.<br><span dir="rtl" lang="ar">اختر الدور لعرض الأعمال الخاصة به</span></p>
+  </div>
+  <div class="picker__grid" id="pickerGrid"></div>
+  <p class="picker__keys pixel">PRESS 1 — 4 OR CLICK A CARD</p>
+</div>
+
+<!-- XP bar = scroll progress -->
+<div class="xp" aria-hidden="true"><i id="xpBar"></i><span class="pixel" id="xpText">XP 0</span></div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<div class="cursor-ring" id="cursorRing"><span id="cursorLabel"></span></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ===== nav ===== -->
+<header class="nav-wrap">
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo">ABD</a>
+    <span class="nav__level pixel" id="navLevel">LV.1 HOME</span>
+    <div class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#spotlight" data-sec="spotlight">On Camera</a>
+      <a href="#work" data-sec="work">Videos</a>
+      <a href="#designs" data-sec="designs">Designs</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav__role" id="roleBtn" data-cursor="SWITCH"><span id="roleBtnIco">🎬</span><span id="roleBtnText">Video Editor</span><b>⇄</b></button>
+    <button class="nav__menu" id="menuBtn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero" data-level="HOME" data-sky="0">
+    <div class="orbit" aria-hidden="true"><div class="orbit__ring" id="orbit"></div></div>
+
+    <div class="hero__content">
+      <div class="hero__chips">
+        <span class="chip"><i class="dot"></i> <span id="heroChip">Video Editor in Amman, Jordan</span></span>
+        <span class="chip chip--pixel pixel blink" id="heroPlayer">PLAYER 1 — READY</span>
+      </div>
+
+      <h1 class="hero__name" aria-label="Abdullah Awamleh">
+        <span class="hero__line" data-split>ABDULLAH</span>
+        <span class="hero__line hero__line--ghost" data-split>AWAMLEH</span>
+      </h1>
+
+      <p class="hero__role" id="heroRole">Video Editor</p>
+      <p class="hero__tag" id="heroTag">Video editor, graphic designer, on-camera talent and content creator in Amman, Jordan — edits, motion graphics, ads and short-form content that stop the scroll.</p>
+
+      <div class="hero__cta">
+        <a href="#about" class="btn btn--lime" id="heroStart" data-cursor="GO">▶ PRESS START</a>
+        <a href="../assets/cv/Abdullah-Awamleh-CV-2026.pdf" class="btn btn--cv" download="Abdullah-Awamleh-CV-2026.pdf" data-cursor="CV">⬇ Download CV</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll"><span class="mouse"><i></i></span>Scroll to begin</a>
+  </section>
+
+  <!-- marquees -->
+  <div class="tapes" aria-hidden="true">
+    <div class="tape tape--a"><div class="tape__in" id="tapeA"></div></div>
+    <div class="tape tape--b"><div class="tape__in" id="tapeB"></div></div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section about" id="about" data-level="ABOUT" data-sky="1"
+           data-toast="🎮|Character Created|Say hi to the player behind the work">
+    <div class="about__grid">
+      <div class="about__text">
+        <h2 class="title" data-split>ABOUT</h2>
+        <p class="lead" id="aboutLead">I'm Abdullah Awamleh, a Jordanian video editor, graphic designer and content creator based in Amman.</p>
+        <p id="aboutBody">I have strong experience in video editing and post-production, motion graphics, advertising design, photography and daily content creation — working with Jo Academy, Hisas Online, Meta Stars and Ghiras Alquds Academy, and directing my own short film. I studied Computer Graphics &amp; Animation at Al-Balqa Applied University, and I combine creativity with marketing know-how to make content that performs.</p>
+        <ul class="about__focus" id="aboutFocus"><li>Video editing</li><li>Motion graphics</li><li>Graphic design</li><li>On-camera talent</li><li>Content creation</li></ul>
+      </div>
+
+      <!-- ID pass -->
+      <div class="pass" id="pass" data-tilt>
+        <div class="pass__shine"></div>
+        <div class="pass__head">
+          <span class="pixel">CREW PASS</span>
+          <span class="pass__class" id="passClass">CLASS: Editor</span>
+        </div>
+        <div class="pass__body">
+          <div class="pass__photo"><img src="../assets/img/personal.jpeg" alt="Portrait of Abdullah Awamleh"></div>
+          <dl class="pass__fields">
+            <div><dt>Name</dt><dd>Abdullah Faiz Alawamleh</dd></div>
+            <div><dt>Base</dt><dd>Amman, Jordan</dd></div>
+            <div><dt>Role</dt><dd id="passRole">Video Editor</dd></div>
+            <div><dt>Languages</dt><dd>Arabic · English</dd></div>
+          </dl>
+        </div>
+        <div class="pass__stats" id="passStats"></div>
+        <div class="pass__mrz">
+          <span>P&lt;JOR&lt;ALAWAMLEH&lt;&lt;ABDULLAH&lt;FAIZ&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+          <span id="passMrz">VIDEO&lt;EDITOR&lt;&lt;AMMAN&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        </div>
+        <div class="pass__stamp pixel">READY<br>TO<br>WORK</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SPOTLIGHT (On-Camera Talent) ================= -->
+  <section class="section spotlight" id="spotlight" data-level="ON AIR" data-sky="2" data-role-section
+           data-toast="🎙️|On Air|On-camera mode unlocked">
+    <div class="center-head">
+      <span class="chip chip--pixel pixel"><i class="onair"></i> ON AIR</span>
+      <h2 class="title" data-split>ON CAMERA</h2>
+      <p class="sub" id="spotSub">Presenting, acting and talking straight to the lens.</p>
+    </div>
+
+    <div class="spot">
+      <div class="phone">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <div class="phone__top"><b id="phoneName">Jo Academy</b><span>•••</span></div>
+          <div class="phone__avatar"><img id="phoneAvatar" src="../assets/img/joacademy-icon.png" alt="Jo Academy logo"></div>
+          <a class="phone__follow" id="phoneFollow" href="https://www.instagram.com/abdullah_al_awamleh_/" target="_blank" rel="noopener me" aria-label="Follow Abdullah Awamleh on Instagram">Follow</a>
+          <div class="phone__stats"><div><b>Short</b><span>videos</span></div><div><b>Daily</b><span>stories</span></div><div><b>Edu</b><span>content</span></div></div>
+          <div class="phone__grid" id="phoneGrid">
+            <video src="../assets/video/presenter-dates.mp4" poster="../assets/poster/presenter-dates.jpg" muted loop autoplay playsinline preload="metadata"></video>
+            <video src="../assets/video/supplementary-exam.mp4" poster="../assets/poster/supplementary-exam.jpg" muted loop autoplay playsinline preload="metadata"></video>
+            <video src="../assets/video/car-talk-1.mp4" poster="../assets/poster/car-talk-1.jpg" muted loop autoplay playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="spot__text">
+        <span class="qi__date" id="spotDate">2026 – Present</span>
+        <h3 class="spot__title" id="spotTitle">On-Camera Talent</h3>
+        <h4 class="spot__role" id="spotRole">Jo Academy · Personal Instagram</h4>
+        <ul class="spot__list" id="spotList">
+          <li>On-camera talent for Jo Academy's educational lessons and announcements</li>
+          <li>Presents, acts and speaks directly to camera on my personal Instagram</li>
+          <li>Short-form videos, characters and Stories that keep audiences watching</li>
+        </ul>
+        <a class="ig-btn" href="https://www.instagram.com/abdullah_al_awamleh_/" target="_blank" rel="noopener me" data-cursor="FOLLOW">
+          <span class="ig-btn__icon"><svg class="ig-glyph" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></span>
+          <span class="ig-btn__text"><small>Follow on Instagram</small><b>@abdullah_al_awamleh_</b></span>
+          <span class="ig-btn__arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="shootWrap">
+      <h3 class="kit__label shoot__label">🕶️ Menswear Model</h3>
+      <div class="shoot" id="shoot"></div>
+    </div>
+  </section>
+
+  <!-- ================= WORK (videos) ================= -->
+  <section class="section work" id="work" data-level="VIDEOS" data-sky="2" data-role-section
+           data-toast="🛸|Reel Found|Videos ready to play">
+    <div class="center-head">
+      <span class="chip chip--pixel pixel">LEVEL SELECT</span>
+      <h2 class="title" data-split>VIDEO WORK</h2>
+      <p class="sub" id="workSub">Pick a level — hover to preview, tap to play with sound.</p>
+    </div>
+
+    <svg class="ufo" viewBox="0 0 160 110" aria-hidden="true">
+      <defs>
+        <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff2d95" stop-opacity=".7"/><stop offset="1" stop-color="#ff2d95" stop-opacity="0"/></linearGradient>
+      </defs>
+      <path class="ufo__beam" d="M58 52 L30 110 L130 110 L102 52 Z" fill="url(#beam)"/>
+      <ellipse cx="80" cy="34" rx="22" ry="20" fill="#3fb8e8" opacity=".85"/>
+      <ellipse cx="80" cy="46" rx="62" ry="14" fill="#007ba7"/>
+      <ellipse cx="80" cy="42" rx="62" ry="9" fill="#3fb8e8"/>
+      <circle class="ufo__light" cx="42" cy="48" r="4" fill="#ff2d95"/>
+      <circle class="ufo__light" cx="80" cy="52" r="4" fill="#ff2d95"/>
+      <circle class="ufo__light" cx="118" cy="48" r="4" fill="#ff2d95"/>
+    </svg>
+
+    <div class="reel">
+      <button class="reel__arrow reel__arrow--prev" id="reelPrev" aria-label="Previous">‹</button>
+      <div class="reel__scroll" id="reelScroll"></div>
+      <button class="reel__arrow reel__arrow--next" id="reelNext" aria-label="Next">›</button>
+    </div>
+  </section>
+
+  <!-- ================= DESIGNS (card deck) ================= -->
+  <section class="section designs" id="designs" data-level="DESIGNS" data-sky="3" data-role-section
+           data-toast="🖼️|Design Mode Unlocked|Designs added to your collection">
+    <div class="center-head">
+      <span class="chip chip--pixel pixel">🎨 DESIGN MODE</span>
+      <h2 class="title" data-split>DESIGNS</h2>
+      <p class="sub">Ads, posters and brand visuals for schools, restaurants, cafés and online brands.</p>
+    </div>
+
+    <div class="deck" id="deck">
+      <div class="deck__stage" id="deckStage"></div>
+      <div class="deck__info">
+        <span class="rarity" id="deckRarity">RARE</span>
+        <b id="deckTitle">—</b>
+        <span id="deckMeta">—</span>
+      </div>
+      <div class="deck__ctrl">
+        <button class="deck__arrow" id="deckPrev" aria-label="Previous design">‹</button>
+        <span class="pixel" id="deckCount">01 / 11</span>
+        <button class="deck__arrow" id="deckNext" aria-label="Next design">›</button>
+      </div>
+      <p class="hint">Tap the card to view it full-screen · swipe or use the arrows to browse</p>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE (always visible) ================= -->
+  <section class="section exp" id="experience" data-level="QUEST LOG" data-sky="4"
+           data-toast="📜|Quest Log Opened|Full career timeline loaded">
+    <div class="center-head">
+      <span class="chip chip--pixel pixel">QUEST LOG</span>
+      <h2 class="title" data-split>EXPERIENCE</h2>
+      <p class="sub" id="expSub">Full timeline — roles that match your pick are marked ★ MAIN QUEST.</p>
+    </div>
+
+    <div class="quest" id="quest">
+      <div class="quest__line"><i id="questFill"></i></div>
+      <div class="quest__rocket" id="questRocket" aria-hidden="true">🚀</div>
+      <div id="questItems"></div>
+    </div>
+
+    <p class="xp-total pixel">⭐ TOTAL XP: 2024 → NOW AND COUNTING</p>
+  </section>
+
+  <!-- ================= SKILLS (always visible) ================= -->
+  <section class="section skills" id="skills" data-level="SKILLS" data-sky="4"
+           data-toast="⚡|Power-ups Collected|Every skill on the board">
+    <div class="center-head">
+      <span class="chip chip--pixel pixel">⚡ POWER-UPS</span>
+      <h2 class="title" data-split>SKILL TREE</h2>
+    </div>
+    <div class="powerups" id="powerups"></div>
+  </section>
+
+  <!-- ================= TOOLKIT (always visible) ================= -->
+  <section class="section kit" id="toolkit" data-level="INVENTORY" data-sky="5"
+           data-toast="🎒|Inventory Checked|Full software loadout revealed">
+    <div class="center-head">
+      <span class="chip chip--pixel pixel">🎒 INVENTORY</span>
+      <h2 class="title" data-split>TOOLKIT</h2>
+    </div>
+
+    <h3 class="kit__label">Software</h3>
+    <div class="planets" id="planets"></div>
+
+    <div class="kit__grid">
+      <div class="kit__card">
+        <h3 class="kit__label">Education</h3>
+        <p class="edu__deg">Computer Graphics & Animation</p>
+        <p class="edu__uni">Al-Balqa Applied University (BAU)</p>
+      </div>
+      <div class="kit__card">
+        <h3 class="kit__label">Languages</h3>
+        <div class="lang"><b>Arabic</b><span>Native</span></div>
+        <div class="lang"><b>English</b><span>Good</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact" data-level="CONTINUE?" data-sky="6"
+           data-toast="🏁|Final Level Reached|Ready to team up on a project">
+    <span class="chip chip--pixel pixel blink">CONTINUE? INSERT COIN</span>
+    <h2 class="contact__title">
+      <span class="scatter">LET'S MAKE</span>
+      <span class="scatter contact__lime" id="contactLine">IT MOVE.</span>
+    </h2>
+    <p class="pixel contact__p2">JOIN AS PLAYER 2? PICK A BUTTON BELOW ▼</p>
+    <div class="contact__btns">
+      <a class="pill pill--cv" href="../assets/cv/Abdullah-Awamleh-CV-2026.pdf" download="Abdullah-Awamleh-CV-2026.pdf">⬇ Download CV</a>
+      <a class="pill" href="tel:+962790767505">+962 79 076 7505</a>
+      <a class="pill" href="mailto:aboodawamleh154@gmail.com">aboodawamleh154@gmail.com</a>
+      <a class="pill" href="https://wa.me/962790767505" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <a class="pill" href="https://www.linkedin.com/in/abdullah-awamleh-062b5326b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="pill pill--ig" href="https://www.instagram.com/abdullah_al_awamleh_/" target="_blank" rel="noopener me">Instagram ↗</a>
+    </div>
+
+    <a class="igcard" id="igCard" href="https://www.instagram.com/abdullah_al_awamleh_/" target="_blank" rel="noopener me" data-cursor="SCAN" aria-label="Instagram @abdullah_al_awamleh_ — scan or tap to follow">
+      <span class="igcard__tag pixel">SCAN ME</span>
+      <span class="igcard__qr" id="igQr"><span class="igcard__laser"></span></span>
+      <span class="igcard__handle"><svg class="ig-glyph" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>@abdullah_al_awamleh_</span>
+      <span class="igcard__hint">Scan with your camera · or tap to follow</span>
+    </a>
+
+    <div class="horizon" aria-hidden="true">
+      <div class="sun"></div>
+      <svg class="hills" viewBox="0 0 1440 260" preserveAspectRatio="none">
+        <path d="M0 160 C 180 80 300 120 420 140 S 700 60 860 120 S 1180 70 1440 130 L1440 260 L0 260Z" fill="#06324a"/>
+        <path d="M0 200 C 220 140 380 190 560 170 S 900 130 1080 180 S 1300 150 1440 175 L1440 260 L0 260Z" fill="#041d2b"/>
+      </svg>
+      <div class="grid-floor"></div>
+    </div>
+    <footer class="footer">© <span id="year"></span> Abdullah Awamleh — Video Editor · Graphic Designer · On-Camera Talent · Content Creator — Amman, Jordan.<br><span lang="ar" dir="rtl">عبدالله العواملة — مونتير ومصمم جرافيك وصانع محتوى في عمّان، الأردن</span></footer>
+  </section>
+</main>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <span class="rarity" id="lbRarity"></span>
+  <span class="lightbox__count pixel" id="lbCount"></span>
+  <button class="lightbox__close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">‹</button>
+  <div class="lightbox__stage" id="lbStage"></div>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="main.js?v=20"></script>
+</body>
+</html>

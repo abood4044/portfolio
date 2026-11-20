@@ -71,34 +71,34 @@ const QUESTS = [
 
 const SKILLS = [
   // primary: true = always shown first and marked ★ PRIMARY in every role
-  { name: "Marketing",        val: 95, ico: "📈", c: "#3fb8e8", primary: true },
-  { name: "Acting",           val: 90, ico: "🎭", c: "#ff2d95", primary: true },
-  { name: "Content Creation", val: 90, ico: "📱", c: "#ff2d95", primary: true },
-  { name: "Video Editing",    val: 95, ico: "🎬", c: "#3fb8e8" },
-  { name: "Adobe Programs",   val: 95, ico: "🧩", c: "#007ba7" },
-  { name: "Graphic Design",   val: 90, ico: "🎨", c: "#3fb8e8" },
-  { name: "Film Making",      val: 90, ico: "🎥", c: "#3fb8e8" },
-  { name: "Photography",      val: 90, ico: "📸", c: "#ff2d95" },
-  { name: "Modeling",         val: 90, ico: "🕶️", c: "#3fb8e8" },
-  { name: "Drawing",          val: 90, ico: "✏️", c: "#007ba7" },
+  { name: "Marketing",        val: 95, ico: "📈", c: "#a66bff", primary: true },
+  { name: "Acting",           val: 90, ico: "🎭", c: "#00e5ff", primary: true },
+  { name: "Content Creation", val: 90, ico: "📱", c: "#00e5ff", primary: true },
+  { name: "Video Editing",    val: 95, ico: "🎬", c: "#a66bff" },
+  { name: "Adobe Programs",   val: 95, ico: "🧩", c: "#3b0a6b" },
+  { name: "Graphic Design",   val: 90, ico: "🎨", c: "#a66bff" },
+  { name: "Film Making",      val: 90, ico: "🎥", c: "#a66bff" },
+  { name: "Photography",      val: 90, ico: "📸", c: "#00e5ff" },
+  { name: "Modeling",         val: 90, ico: "🕶️", c: "#a66bff" },
+  { name: "Drawing",          val: 90, ico: "✏️", c: "#3b0a6b" },
 ];
 
 const SOFTWARE = [
-  { name: "Premiere Pro",   rarity: "legendary", c: "#ff2d95" },
-  { name: "After Effects",  rarity: "legendary", c: "#007ba7" },
-  { name: "Photoshop",      rarity: "legendary", c: "#3fb8e8" },
-  { name: "Illustrator",    rarity: "epic",      c: "#ff2d95" },
-  { name: "Lightroom",      rarity: "epic",      c: "#007ba7" },
-  { name: "Media Encoder",  rarity: "rare",      c: "#3fb8e8" },
-  { name: "3ds Max",        rarity: "rare",      c: "#ff2d95" },
-  { name: "Maya",           rarity: "rare",      c: "#007ba7" },
-  { name: "MS Office",      rarity: "common",    c: "#3fb8e8" },
+  { name: "Premiere Pro",   rarity: "legendary", c: "#00e5ff" },
+  { name: "After Effects",  rarity: "legendary", c: "#3b0a6b" },
+  { name: "Photoshop",      rarity: "legendary", c: "#a66bff" },
+  { name: "Illustrator",    rarity: "epic",      c: "#00e5ff" },
+  { name: "Lightroom",      rarity: "epic",      c: "#3b0a6b" },
+  { name: "Media Encoder",  rarity: "rare",      c: "#a66bff" },
+  { name: "3ds Max",        rarity: "rare",      c: "#00e5ff" },
+  { name: "Maya",           rarity: "rare",      c: "#3b0a6b" },
+  { name: "MS Office",      rarity: "common",    c: "#a66bff" },
 ];
 
 /* The four roles — what each one shows and highlights */
 const ROLES = {
   video: {
-    n: 1, name: "Video Editor", ar: "مونتير", ico: "🎬", c: "#ff2d95",
+    n: 1, name: "Video Editor", ar: "مونتير", ico: "🎬", c: "#00e5ff",
     desc: "Editing, motion graphics, studio & podcast production, e-learning and short film.",
     chip: "Video Editor in Amman, Jordan",
     tag: "Edits, motion graphics and post-production that stop the scroll — from raw footage to final export.",
@@ -114,7 +114,7 @@ const ROLES = {
     contact: "IT MOVE.",
   },
   design: {
-    n: 2, name: "Graphic Designer", ar: "مصمم جرافيك", ico: "🎨", c: "#3fb8e8",
+    n: 2, name: "Graphic Designer", ar: "مصمم جرافيك", ico: "🎨", c: "#a66bff",
     desc: "Ads, posters, social media and brand visuals for restaurants, cafés, schools and businesses.",
     chip: "Graphic Designer in Amman, Jordan",
     tag: "Advertising and brand visuals that make restaurants, cafés, schools and businesses impossible to ignore.",
@@ -130,7 +130,7 @@ const ROLES = {
     contact: "IT POP.",
   },
   presenter: {
-    n: 3, name: "On-Camera Talent", ar: "وجه إعلامي", ico: "🎙️", c: "#ff2d95",
+    n: 3, name: "On-Camera Talent", ar: "وجه إعلامي", ico: "🎙️", c: "#00e5ff",
     desc: "On camera for Jo Academy and on my personal Instagram — presenting, acting and menswear modeling.",
     chip: "On-Camera Talent in Amman, Jordan",
     tag: "Presenting, acting and talking straight to the lens — for Jo Academy and on my own Instagram.",
@@ -158,7 +158,7 @@ const ROLES = {
     },
   },
   creator: {
-    n: 4, name: "Content Creator", ar: "صانع محتوى", ico: "📱", c: "#3fb8e8",
+    n: 4, name: "Content Creator", ar: "صانع محتوى", ico: "📱", c: "#a66bff",
     desc: "Daily social content end-to-end: idea, filming, editing, design and marketing.",
     chip: "Content Creator in Amman, Jordan",
     tag: "Daily content from idea to post — filmed, edited, designed and built to perform.",
@@ -190,13 +190,13 @@ const ROLE_KEYS = Object.keys(ROLES);
 
 const LOADER_TIPS = ["Rendering timeline…", "Syncing audio…", "Color grading…", "Adding keyframes…", "Exporting final cut…"];
 const SKY = [
-  "linear-gradient(180deg,#0a0a0a,#0a0d12)",
-  "linear-gradient(180deg,#0a0a0a,#06121a)",
-  "linear-gradient(180deg,#0a0a0a,#0b1218)",
-  "linear-gradient(180deg,#0a0a0a,#140a10)",
-  "linear-gradient(180deg,#0a0a0a,#071620)",
-  "linear-gradient(180deg,#0a0a0a,#160a12)",
-  "linear-gradient(180deg,#0a0a0a,#2a0a1c 70%,#4a0d2c)",
+  "linear-gradient(180deg,#050505,#09060f)",
+  "linear-gradient(180deg,#050505,#0d0619)",
+  "linear-gradient(180deg,#050505,#05121a)",
+  "linear-gradient(180deg,#050505,#120720)",
+  "linear-gradient(180deg,#050505,#061419)",
+  "linear-gradient(180deg,#050505,#150828)",
+  "linear-gradient(180deg,#050505,#1a0833 70%,#3b0a6b)",
 ];
 
 /* ============================================================ */
@@ -472,7 +472,7 @@ $$(".role").forEach((b) => b.addEventListener("click", () => chooseRole(b.datase
    ============================================================ */
 (() => {
   const cv = $("#space"), ctx = cv.getContext("2d");
-  const COLORS = ["#ffffff", "#ffffff", "#ffffff", "#ff2d95", "#ff2d95", "#3fb8e8"];
+  const COLORS = ["#ffffff", "#ffffff", "#ffffff", "#00e5ff", "#00e5ff", "#a66bff"];
   let w, h, cx, cy, dpr, stars = [], boost = 0;
   function reset(s, far) {
     s.x = (Math.random() - 0.5) * w; s.y = (Math.random() - 0.5) * h;
@@ -806,14 +806,14 @@ function drawQr() {
     <rect x="${x + 2}" y="${y + 2}" width="3" height="3" rx="0.9" fill="url(#qrg)"/>`;
   const m = size / 2, L = n * 0.26;
   box.insertAdjacentHTML("afterbegin", `<svg viewBox="0 0 ${size} ${size}" role="img" aria-label="QR code to Instagram @abdullah_al_awamleh_">
-    <defs><linearGradient id="qrg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d1007a"/><stop offset="1" stop-color="#005f82"/></linearGradient></defs>
+    <defs><linearGradient id="qrg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b0a6b"/><stop offset="1" stop-color="#006d7a"/></linearGradient></defs>
     <rect width="${size}" height="${size}" rx="2" fill="#f5f7fa"/>
     <g fill="url(#qrg)">${dots}</g>
     ${eye(q, q)}${eye(q + n - 7, q)}${eye(q, q + n - 7)}
     <g transform="translate(${m - L / 2} ${m - L / 2})">
       <rect width="${L}" height="${L}" rx="${L * 0.28}" fill="none" stroke="url(#qrg)" stroke-width="${L * 0.09}"/>
       <circle cx="${L / 2}" cy="${L / 2}" r="${L * 0.22}" fill="none" stroke="url(#qrg)" stroke-width="${L * 0.09}"/>
-      <circle cx="${L * 0.76}" cy="${L * 0.24}" r="${L * 0.065}" fill="#d1007a"/>
+      <circle cx="${L * 0.76}" cy="${L * 0.24}" r="${L * 0.065}" fill="#3b0a6b"/>
     </g></svg>`);
 }
 drawQr();
