@@ -461,7 +461,6 @@ $("#pickerGrid").innerHTML = ROLE_KEYS.map((k) => {
     <span class="role__name">${r.name}</span>
     <span class="role__ar" lang="ar" dir="rtl">${r.ar}</span>
     <span class="role__desc">${r.desc}</span>
-    <span class="role__stat">${top[0]} <i><b style="--v:${top[1]}%"></b></i></span>
     <span class="role__go">Select ▶</span>
   </button>`;
 }).join("");
