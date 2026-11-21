@@ -34,6 +34,7 @@ const VIDEOS = [
   V("night-talk-1.mp4",         "Night Talk · Part 1",        "TALK",        "camera"),
   V("night-talk-2.mp4",         "Night Talk · Part 2",        "TALK",        "camera"),
   V("night-talk-3.mp4",         "Night Talk · Part 3",        "TALK",        "camera"),
+  V("podcast-edit.mp4",         "Podcast Edit · Meta Stars",  "PODCAST",     "edit", { wide: true }),
 ];
 
 // menswear modeling photoshoot of Abdullah
@@ -106,7 +107,7 @@ const ROLES = {
     body: "From setting up studios and filming to editing, motion graphics, VFX and final export, I run the full post-production pipeline in Premiere Pro, After Effects and Media Encoder — and use AI tools to speed up e-learning edits.",
     focus: ["Post-production", "Motion graphics", "Podcast & studio", "E-learning video", "Short film"],
     stats: [["EDITING", 95], ["MOTION", 90], ["FILMMAKING", 90]],
-    sections: ["work"], videos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+    sections: ["work"], videos: [26, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
     jobs: ["jo", "film", "hisas", "meta", "ghiras"],
     skills: ["Video Editing", "Film Making", "Adobe Programs"],
     tools: ["Premiere Pro", "After Effects", "Media Encoder"],
