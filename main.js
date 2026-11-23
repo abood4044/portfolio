@@ -35,6 +35,7 @@ const VIDEOS = [
   V("night-talk-2.mp4",         "Night Talk · Part 2",        "TALK",        "camera"),
   V("night-talk-3.mp4",         "Night Talk · Part 3",        "TALK",        "camera"),
   V("podcast-edit.mp4",         "Podcast Edit · Meta Stars",  "PODCAST",     "edit", { wide: true }),
+  V("maa-al-talib.mp4",         "مع الطالب — Student Talk",    "ON CAMERA",   "camera"),
 ];
 
 // menswear modeling photoshoot of Abdullah
@@ -107,7 +108,7 @@ const ROLES = {
     body: "From setting up studios and filming to editing, motion graphics, VFX and final export, I run the full post-production pipeline in Premiere Pro, After Effects and Media Encoder — and use AI tools to speed up e-learning edits.",
     focus: ["Post-production", "Motion graphics", "Podcast & studio", "E-learning video", "Short film"],
     stats: [["EDITING", 95], ["MOTION", 90], ["FILMMAKING", 90]],
-    sections: ["work"], videos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 26],
+    sections: ["work"], videos: [1, 2, 27, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 26],
     jobs: ["jo", "film", "hisas", "meta", "ghiras"],
     skills: ["Video Editing", "Film Making", "Adobe Programs"],
     tools: ["Premiere Pro", "After Effects", "Media Encoder"],
@@ -139,7 +140,7 @@ const ROLES = {
     body: "I appear on camera for Jo Academy's educational content and create on-camera videos for my personal Instagram — backed by acting, menswear modeling and a filmmaker's eye for how a shot should feel.",
     focus: ["On-camera talent", "Presenting", "Acting", "Menswear modeling", "Instagram"],
     stats: [["ON CAMERA", 90], ["ACTING", 90], ["MODELING", 90]],
-    sections: ["spotlight", "work"], videos: [1, 2, 4, 5, 8, 9, 10],
+    sections: ["spotlight", "work"], videos: [1, 2, 27, 4, 5, 8, 9, 10],
     jobs: ["jo", "film"],
     skills: ["Acting", "Modeling", "Content Creation", "Marketing"],
     tools: ["Premiere Pro", "After Effects"],
@@ -167,7 +168,7 @@ const ROLES = {
     body: "I create daily visual content and ads for brands and digital platforms, film events, present on camera and design the visuals around it — with a marketing mindset so every post is made to perform.",
     focus: ["Daily content", "Short-form video", "Event coverage", "Social design", "Marketing"],
     stats: [["MARKETING", 95], ["CONTENT", 90], ["EDITING", 95]],
-    sections: ["spotlight", "work"], videos: [6, 7, 12, 8, 9, 10, 18, 19, 22, 23, 24, 25],
+    sections: ["spotlight", "work"], videos: [6, 7, 27, 12, 8, 9, 10, 18, 19, 22, 23, 24, 25],
     jobs: ["jo", "hisas", "ghiras", "meta"],
     skills: ["Content Creation", "Marketing", "Photography", "Video Editing"],
     tools: ["Premiere Pro", "Photoshop", "Lightroom", "After Effects"],
